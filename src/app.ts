@@ -1,18 +1,13 @@
-import express, {Request, Response} from 'express';
+import express from 'express';
 import dotenv from 'dotenv';
+import router from './router';
 
 dotenv.config();
 
-
 function createApp() {
     const app = express();
-
     app.use(express.json());
-
-    app.get ('/', (req: Request, res: Response) => {
-      res.status(200).json({
-        message: 'Welcome to the K-Pop Generations API',});
-    });
+    app.use('/api-kpop', router);
     return app;
 }
 
