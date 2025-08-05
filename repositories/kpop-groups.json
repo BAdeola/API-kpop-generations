@@ -1,0 +1,173 @@
+{
+  "generations": [
+    {
+      "id": 1,
+      "name": "1ª Geração",
+      "groups": [
+        {
+          "id": 101,
+          "name": "H.O.T.",
+          "koreanName": "에이치오티",
+          "members": [
+            { "id": 10101, "name": "Moon Hee-joon", "koreanName": "문희준" },
+            { "id": 10102, "name": "Jang Woo-hyuk", "koreanName": "장우혁" },
+            { "id": 10103, "name": "Tony An", "koreanName": "토니안" },
+            { "id": 10104, "name": "Kangta", "koreanName": "강타" },
+            { "id": 10105, "name": "Lee Jae-won", "koreanName": "이재원" }
+          ]
+        },
+        {
+          "id": 102,
+          "name": "Sechs Kies",
+          "koreanName": "젝스키스",
+          "members": [
+            { "id": 10201, "name": "Eun Ji-won", "koreanName": "은지원" },
+            { "id": 10202, "name": "Lee Jai-jin", "koreanName": "이재진" },
+            { "id": 10203, "name": "Kim Jae-duck", "koreanName": "김재덕" },
+            { "id": 10204, "name": "Jang Su-won", "koreanName": "장수원" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "2ª Geração",
+      "groups": [
+        {
+          "id": 201,
+          "name": "TVXQ",
+          "koreanName": "동방신기",
+          "members": [
+            { "id": 20101, "name": "U-Know Yunho", "koreanName": "유노윤호" },
+            { "id": 20102, "name": "Max Changmin", "koreanName": "최강창민" }
+          ]
+        },
+        {
+          "id": 202,
+          "name": "Super Junior",
+          "koreanName": "슈퍼주니어",
+          "members": [
+            { "id": 20201, "name": "Leeteuk", "koreanName": "이특" },
+            { "id": 20202, "name": "Heechul", "koreanName": "희철" },
+            { "id": 20203, "name": "Yesung", "koreanName": "예성" },
+            { "id": 20204, "name": "Shindong", "koreanName": "신동" }
+          ]
+        },
+        {
+          "id": 203,
+          "name": "2NE1",
+          "koreanName": "투애니원",
+          "members": [
+            { "id": 20301, "name": "CL", "koreanName": "씨엘" },
+            { "id": 20302, "name": "Bom", "koreanName": "박봄" },
+            { "id": 20303, "name": "Dara", "koreanName": "산다라박" },
+            { "id": 20304, "name": "Minzy", "koreanName": "공민지" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "3ª Geração",
+      "groups": [
+        {
+          "id": 301,
+          "name": "EXO",
+          "koreanName": "엑소",
+          "members": [
+            { "id": 30101, "name": "Suho", "koreanName": "수호" },
+            { "id": 30102, "name": "Baekhyun", "koreanName": "백현" },
+            { "id": 30103, "name": "Chanyeol", "koreanName": "찬열" },
+            { "id": 30104, "name": "Kai", "koreanName": "카이" }
+          ]
+        },
+        {
+          "id": 302,
+          "name": "BTS",
+          "koreanName": "방탄소년단",
+          "members": [
+            { "id": 30201, "name": "RM", "koreanName": "알엠" },
+            { "id": 30202, "name": "Jin", "koreanName": "진" },
+            { "id": 30203, "name": "Suga", "koreanName": "슈가" },
+            { "id": 30204, "name": "J-Hope", "koreanName": "제이홉" },
+            { "id": 30205, "name": "Jimin", "koreanName": "지민" },
+            { "id": 30206, "name": "V", "koreanName": "뷔" },
+            { "id": 30207, "name": "Jungkook", "koreanName": "정국" }
+          ]
+        },
+        {
+          "id": 303,
+          "name": "BLACKPINK",
+          "koreanName": "블랙핑크",
+          "members": [
+            { "id": 30301, "name": "Jisoo", "koreanName": "지수" },
+            { "id": 30302, "name": "Jennie", "koreanName": "제니" },
+            { "id": 30303, "name": "Rosé", "koreanName": "로제" },
+            { "id": 30304, "name": "Lisa", "koreanName": "리사" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "4ª Geração",
+      "groups": [
+        {
+          "id": 401,
+          "name": "Stray Kids",
+          "koreanName": "스트레이 키즈",
+          "members": [
+            { "id": 40101, "name": "Bang Chan", "koreanName": "방찬" },
+            { "id": 40102, "name": "Lee Know", "koreanName": "리노" },
+            { "id": 40103, "name": "Changbin", "koreanName": "창빈" },
+            { "id": 40104, "name": "Hyunjin", "koreanName": "현진" }
+          ]
+        },
+        {
+          "id": 402,
+          "name": "TXT",
+          "koreanName": "투모로우바이투게더",
+          "members": [
+            { "id": 40201, "name": "Soobin", "koreanName": "수빈" },
+            { "id": 40202, "name": "Yeonjun", "koreanName": "연준" },
+            { "id": 40203, "name": "Beomgyu", "koreanName": "범규" },
+            { "id": 40204, "name": "Taehyun", "koreanName": "태현" },
+            { "id": 40205, "name": "Huening Kai", "koreanName": "휴닝카이" }
+          ]
+        },
+        {
+          "id": 403,
+          "name": "ENHYPEN",
+          "koreanName": "엔하이픈",
+          "members": [
+            { "id": 40301, "name": "Jungwon", "koreanName": "정원" },
+            { "id": 40302, "name": "Heeseung", "koreanName": "희승" },
+            { "id": 40303, "name": "Jay", "koreanName": "제이" },
+            { "id": 40304, "name": "Jake", "koreanName": "제이크" },
+            { "id": 40305, "name": "Sunghoon", "koreanName": "성훈" },
+            { "id": 40306, "name": "Sunoo", "koreanName": "선우" },
+            { "id": 40307, "name": "Ni-ki", "koreanName": "니키" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "5ª Geração",
+      "groups": [
+        {
+          "id": 501,
+          "name": "ILLIT",
+          "koreanName": "아일릿",
+          "members": [
+            { "id": 50101, "name": "Yunah", "koreanName": "윤아" },
+            { "id": 50102, "name": "Minju", "koreanName": "민주" },
+            { "id": 50103, "name": "Moka", "koreanName": "모카" },
+            { "id": 50104, "name": "Wonhee", "koreanName": "원희" },
+            { "id": 50105, "name": "Iroha", "koreanName": "이로하" }
+          ]
+        }
+      ]
+    }
+  ]
+}
