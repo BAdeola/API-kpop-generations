@@ -1,13 +1,14 @@
 import { noContent, notFound, ok } from "../utils/http-helper";
+import * as IdolRepository from "../repositories/idols-repository";
 
 export const getIdolService = async () => {
-    const idolData = { name: "Sample Idol", group: "Sample Group" };
+    const idolsData = await IdolRepository.getMemberList(202);
 
-    if (!idolData) {
+    if (!idolsData) {
         return notFound({ error: "Idol not found" });
-    } else if (Object.keys(idolData).length === 0) {
-        return noContent(idolData);
+    } else if (idolsData.length === 0) {
+        return noContent(idolsData);
     } else {
-        return ok(idolData);
+        return ok(idolsData);
     }
 };
