@@ -12,3 +12,13 @@ export const getIdolService = async () => {
         return ok(idolsData);
     }
 };
+
+export const getIdolByIdService = async (idolId: number) => {
+    const idolData = await IdolRepository.getMemberById(idolId);
+
+    if (!idolData) {
+        return notFound({ error: "Idol not found" });
+    } else {
+        return ok(idolData);
+    }
+};

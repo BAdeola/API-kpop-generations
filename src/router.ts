@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { getIdols } from "./controllers/idols-controller";
+import * as IdolsControllers from "./controllers/idols-controller";
 
 const router = Router();
 
-router.get('/idols', getIdols);
+router.get('/idols', IdolsControllers.getIdols);
+router.get('/idols/:id', IdolsControllers.getIdolById);
 
 export default router;
