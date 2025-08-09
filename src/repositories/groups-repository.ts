@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { GroupModel } from '../models/group-models';
+import { GroupModel } from '../models/group-model';
 
 const pathData = path.join(__dirname, '..', 'data', 'groups.json');
 

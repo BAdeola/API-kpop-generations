@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as fs from 'fs';
-import { IdolModel } from '../models/idols-models';
-import { GroupModel } from '../models/group-models';
+import { IdolModel } from '../models/idols-model';
+import { GroupModel } from '../models/group-model';
 
 const pathData = path.join(__dirname, '../repositories/kpop-groups.json');
 

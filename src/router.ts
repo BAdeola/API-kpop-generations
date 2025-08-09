@@ -3,6 +3,6 @@ import { getIdols } from "./controllers/idols-controller";
 
 const router = Router();
 
-router.get('/group', getIdols);
+router.get('/idols', getIdols);
 
 export default router;

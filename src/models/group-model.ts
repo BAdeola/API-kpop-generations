@@ -1,4 +1,4 @@
-import { IdolModel } from "./idols-models";
+import { IdolModel } from "./idols-model";
 
 export interface GroupModel {
   id: number;
