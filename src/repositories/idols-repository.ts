@@ -24,17 +24,32 @@ export const getMemberById = async (idolId: number): Promise<IdolModel | null> =
   return idol || null;
 };
 
-export const insertMember = async (groupId: number, member: IdolModel): Promise<void> => {
+export const insertMember = async (groupId: number, member: IdolModel): Promise<IdolModel | null> => {
   const data = await fs.promises.readFile(pathData, 'utf-8');
   const json = JSON.parse(data);
 
   // Encontra o grupo pelo ID
-  const group = json.generations.flatMap((generation: any) => generation.groups).find((group: GroupModel) => group.id === groupId);
+  const group = json.generations
+    .flatMap((generation: any) => generation.groups)
+    .find((group: GroupModel) => group.id === groupId);
 
-  if (group) {
-    group.members.push(member);
-    await fs.promises.writeFile(pathData, JSON.stringify(json, null, 2));
+  if (!group) {
+    // Grupo não encontrado
+    return null;
   }
+
+  // Verifica se já há membros
+  if (group.members && group.members.length > 0) {
+    const lastId = Math.max(...group.members.map((m: IdolModel) => m.id));
+    member.id = lastId + 1;
+  } else {
+    member.id = groupId * 100 + 1;
+    group.members = [];
+  }
+
+  group.members.push(member);
+  await fs.promises.writeFile(pathData, JSON.stringify(json, null, 2));
+  return member;
 };
 
 export const deleteMemberById = async (groupId: number, memberId: number): Promise<void> => {

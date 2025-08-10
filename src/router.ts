@@ -5,5 +5,6 @@ const router = Router();
 
 router.get('/idols', IdolsControllers.getIdols);
 router.get('/idols/:id', IdolsControllers.getIdolById);
+router.post('/idols', IdolsControllers.insertIdol);
 
 export default router;

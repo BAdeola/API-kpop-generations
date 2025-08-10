@@ -1,15 +1,23 @@
 import { Request, Response } from 'express';
-import { getIdolByIdService, getIdolService } from '../services/idol-services';
+import * as IdolService from '../services/idol-services';
 
 export const getIdols = async (req: Request, res: Response) => {
-    const HttpResponse = await getIdolService();
+    const HttpResponse = await IdolService.getIdolService();
 
     res.status(HttpResponse.status).json(HttpResponse.body);
 };
 
 export const getIdolById = async (req: Request, res: Response) => {
     const idolId = parseInt(req.params.id);
-    const HttpResponse = await getIdolByIdService(idolId);
+    const HttpResponse = await IdolService.getIdolByIdService(idolId);
 
     res.status(HttpResponse.status).json(HttpResponse.body);
 };
+
+export const insertIdol = async (req: Request, res: Response) => {
+    const idolData = req.body;
+    const groupID = req.body.groupID || req.params.groupID;
+    const HttpResponse = await IdolService.insertIdolService(groupID, idolData);
+
+    res.status(HttpResponse.status).json(HttpResponse.body);
+};  

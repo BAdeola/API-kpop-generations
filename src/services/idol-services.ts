@@ -22,3 +22,13 @@ export const getIdolByIdService = async (idolId: number) => {
         return ok(idolData);
     }
 };
+
+export const insertIdolService = async (groupID: number, idolData: any) => {
+    const newIdol = await IdolRepository.insertMember(groupID, idolData);
+
+    if (newIdol === null) {
+        return notFound({ error: "Idol not found" });
+    } else {
+        return ok(newIdol);
+    }
+};
