@@ -16,7 +16,7 @@ export const getIdolById = async (req: Request, res: Response) => {
 
 export const insertIdol = async (req: Request, res: Response) => {
     const idolData = req.body;
-    const groupID = req.body.groupID || req.params.groupID;
+    const groupID = req.body.groupId || req.params.groupId;
     const HttpResponse = await IdolService.insertIdolService(groupID, idolData);
 
     res.status(HttpResponse.status).json(HttpResponse.body);
@@ -29,3 +29,7 @@ export const deleteIdolById = async (req: Request, res: Response) => {
 
     res.status(HttpResponse.status).json(HttpResponse.body);
 };
+
+export function getGroupsList(arg0: string, getGroupsList: any) {
+    throw new Error("Function not implemented.");
+}
