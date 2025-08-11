@@ -52,7 +52,7 @@ export const insertMember = async (groupId: number, member: IdolModel): Promise<
   return member;
 };
 
-export const deleteMemberById = async (groupId: number, memberId: number): Promise<void> => {
+export const deleteMemberById = async (groupId: number, memberId: number): Promise<boolean> => {
   const data = await fs.promises.readFile(pathData, 'utf-8');
   const json = JSON.parse(data);
 
@@ -62,5 +62,7 @@ export const deleteMemberById = async (groupId: number, memberId: number): Promi
   if (group) {
     group.members = group.members.filter((member: IdolModel) => member.id !== memberId);
     await fs.promises.writeFile(pathData, JSON.stringify(json, null, 2));
+    return true;
   }
+  return false;
 };

@@ -20,4 +20,12 @@ export const insertIdol = async (req: Request, res: Response) => {
     const HttpResponse = await IdolService.insertIdolService(groupID, idolData);
 
     res.status(HttpResponse.status).json(HttpResponse.body);
-};  
+};
+
+export const deleteIdolById = async (req: Request, res: Response) => {
+    const idolId = parseInt(req.params.id);
+    const groupId = parseInt(req.params.groupId);
+    const HttpResponse = await IdolService.deleteIdolByIdService(groupId, idolId);
+
+    res.status(HttpResponse.status).json(HttpResponse.body);
+};

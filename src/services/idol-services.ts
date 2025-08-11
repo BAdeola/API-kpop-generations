@@ -32,3 +32,13 @@ export const insertIdolService = async (groupID: number, idolData: any) => {
         return ok(newIdol);
     }
 };
+
+export const deleteIdolByIdService = async (groupId: number, idolId: number) => {
+    const result = await IdolRepository.deleteMemberById(groupId, idolId);
+
+    if (result !== false) {
+        return ok({ message: "Idol deleted successfully" });
+    } else {
+        return notFound({ error: "Idol not found" });
+    }
+};
