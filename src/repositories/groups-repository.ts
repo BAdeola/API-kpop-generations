@@ -2,16 +2,16 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { GroupModel } from '../models/group-model';
 
-const pathData = path.join(__dirname, '..', 'data', 'groups.json');
+const pathData = path.join(__dirname, '../repositories/kpop-groups.json');
 
-export const getGroupList = async (): Promise<GroupModel[]> => {
+export const getGroupList = async (): Promise<string[]> => {
   const data = await fs.promises.readFile(pathData, 'utf-8');
   const json = JSON.parse(data);
 
-  // Extrai todos os grupos de todas as gerações
-  const allGroups = json.generations.flatMap((generation: any) => generation.groups);
-
-  return allGroups;
+  // Extrai todos os grupos de todas as gerações e retorna apenas os nomes
+  const groupNames = json.generations.flatMap((generation: any) => generation.groups).map((group: GroupModel) => group.name);
+  
+  return groupNames;
 };
 
 export const getGroupById = async (groupId: number): Promise<GroupModel | null> => {
